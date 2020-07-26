@@ -1,0 +1,18 @@
+{
+  "name": "hitman",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 1336",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "98.css": "^0.1.16",
+    "dotenv": "^8.2.0",
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass": "^1.26.10"
+  }
+}

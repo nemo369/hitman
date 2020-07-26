@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "songs",
+  "info": {
+    "name": "song"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "by": {
+      "type": "string"
+    },
+    "trackNumber": {
+      "type": "integer"
+    },
+    "links": {
+      "type": "json"
+    },
+    "album": {
+      "via": "songs",
+      "model": "album"
+    }
+  }
+}

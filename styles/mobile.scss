@@ -1,0 +1,15 @@
+.mobile {
+  display: none;
+}
+@media (max-width: 960px), (max-device-width: 760px), (orientation: portrait) {
+  html {
+    font-size: 16px;
+    font-size: 4.266666666666667vw;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}

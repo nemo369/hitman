@@ -1,0 +1,15 @@
+html {
+  font-size: 1.1vw;
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  color: $black;
+  background-color: $gray;
+}

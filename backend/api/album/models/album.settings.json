@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "album",
+  "info": {
+    "name": "album"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "desc": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    },
+    "albumNumber": {
+      "type": "integer"
+    },
+    "thumbnail": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "year": {
+      "type": "integer"
+    },
+    "songs": {
+      "collection": "song",
+      "via": "album"
+    },
+    "youTubePlaylist": {
+      "type": "string"
+    }
+  }
+}

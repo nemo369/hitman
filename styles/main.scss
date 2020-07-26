@@ -1,0 +1,15 @@
+// Base: animations, base, typography, and utilies.
+@import "./base/var.scss";
+// @import "./base/reset.scss";
+@import "./base/utilites.scss";
+@import "./base/general";
+@import "./base/fonts.scss";
+
+// Layout: Header, footer, grid, navigation
+
+// Pages: Have a single scss for each specific page
+
+// Vendor: handles 3rd party css
+// Components: have a single scss file for each individual component
+@import "./components/header.scss";
+@import "./mobile.scss";
