@@ -1,0 +1,75 @@
+.wordart {
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wordart.rainbow {
+  transform: scale(1, 1.5);
+  -webkit-transform: scale(1, 1.5);
+  -moz-transform: scale(1, 1.5);
+  -o-transform: scale(1, 1.5);
+  -ms-transform: scale(1, 1.5);
+}
+
+.wordart.rainbow {
+  background: red;
+  background: -webkit-linear-gradient(
+    left,
+    #b306a9,
+    #ef2667,
+    #f42e2c,
+    #ffa509,
+    #fdfc00,
+    #55ac2f,
+    #0b13fd,
+    #a804af
+  );
+  background: -o-linear-gradient(
+    left,
+    #b306a9,
+    #ef2667,
+    #f42e2c,
+    #ffa509,
+    #fdfc00,
+    #55ac2f,
+    #0b13fd,
+    #a804af
+  );
+  background: -moz-linear-gradient(
+    left,
+    #b306a9,
+    #ef2667,
+    #f42e2c,
+    #ffa509,
+    #fdfc00,
+    #55ac2f,
+    #0b13fd,
+    #a804af
+  );
+  background: linear-gradient(
+    to right,
+    #b306a9,
+    #ef2667,
+    #f42e2c,
+    #ffa509,
+    #fdfc00,
+    #55ac2f,
+    #0b13fd,
+    #a804af
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wordart.blues {
+  font-family: Impact, sans-serif;
+  color: #24c0fd;
+  -webkit-text-stroke: 0.01em #0000aa;
+  filter: progid:DXImageTransform.Microsoft.Glow(Color=#0000aa,Strength=1);
+  text-shadow: -0.09em -0.09em 0px #0000aa;
+  letter-spacing: -0.05em;
+}

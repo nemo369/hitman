@@ -33,8 +33,8 @@
       "type": "integer"
     },
     "songs": {
-      "collection": "song",
-      "via": "album"
+      "via": "album",
+      "collection": "song"
     },
     "youTubePlaylist": {
       "type": "string"

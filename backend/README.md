@@ -1,3 +1,3 @@
-# Strapi application
+# Hitman Backend
 
-A quick description of your strapi application
+strapi application

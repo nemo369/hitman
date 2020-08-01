@@ -22,8 +22,11 @@
       "type": "json"
     },
     "album": {
-      "via": "songs",
-      "model": "album"
+      "model": "album",
+      "via": "songs"
+    },
+    "duration": {
+      "type": "integer"
     }
   }
 }
