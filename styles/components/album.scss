@@ -1,0 +1,38 @@
+.album {
+  max-width: rem(960);
+  margin: 0 auto 75px;
+  padding: rem(50);
+
+  &__body {
+    grid-template-columns: rem(80) rem(150) 1fr;
+    grid-template-rows: 150px;
+    grid-template-areas: "year thumb details";
+    grid-gap: 26px;
+    align-items: center;
+    display: grid;
+  }
+  &__year {
+    grid-area: year;
+    font-size: rem(30);
+  }
+  &__thumb {
+    grid-area: thumb;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+  }
+  &__details {
+    grid-area: details;
+    div {
+      font-size: rem(18);
+      margin-bottom: rem(5);
+      font-family: $font;
+    }
+  }
+}
+
+.albums {
+  margin-top: -80px;
+}

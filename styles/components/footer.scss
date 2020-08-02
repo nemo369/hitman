@@ -1,0 +1,68 @@
+.footer {
+  background: #c0c0c0;
+  height: 35px;
+  width: 100%;
+
+  border-top: 2px solid #fff;
+
+  .toolbar-start-menu {
+    float: left;
+
+    .start-button {
+      background: url(https://win98icons.alexmeub.com/icons/png/windows-0.png)
+        no-repeat 2px center / 24px;
+      padding-left: 28px;
+      padding-right: 5px;
+      height: 29px;
+      margin: 2px 3px;
+      font-weight: bold;
+      border: 2px solid #7c7c7c;
+      border-top-color: #fff;
+      border-left-color: #fff;
+
+      &:hover {
+        background-color: darken(#c0c0c0, 10%);
+      }
+    }
+  }
+
+  .toolbar-separator {
+    width: 2px;
+    height: 26px;
+    margin-top: 2px;
+    background: #797979;
+    float: left;
+    border-right: 1px solid #fff;
+  }
+
+  .toolbar-left {
+    float: left;
+    padding: 0 5px;
+  }
+
+  .toolbar-icon {
+    background: no-repeat center / auto 20px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    margin-top: 3px;
+    margin: 3px 2px;
+
+    //   &.ie {
+    //     background-image: url(https://win98icons.alexmeub.com/icons/png/msie1-4.png);
+    //   }
+  }
+
+  .toolbar-right {
+    float: right;
+    margin: 2px 3px;
+    height: 29px;
+    border: 2px solid #7c7c7c;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+
+    .time {
+      padding: 6px 10px;
+    }
+  }
+}

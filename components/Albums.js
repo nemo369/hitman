@@ -1,18 +1,41 @@
 import Link from 'next/link'
 
-const Album = ({album}) => (
-    <li>
-        <Link href="/volume/[albumId]" as={`/volume/${album.albumNumber}`}>
-            <a>{album.title}</a>
-        </Link>
+const Album = ({album , index}) =>{ 
+    // const thumbnail = album.thumbnail[0].formats.thumbnail.url;
+    const thumbnail = `https://api.buzzanglemusic.com/images/songs/88424683`;
+
+    
+    return(
+    <li className={`album album--${index} window`}>
+        <div className="title-bar">
+            <div className="title-bar-text">{album.title}</div>
+            <div className="title-bar-controls">
+            <Link href="/volume/[albumId]" as={`/volume/${album.albumNumber}`}>
+                <a>
+                    <button aria-label="Help"></button>
+                </a>
+            </Link>
+            </div>
+        </div>
+        <div className="window-body album__body">
+            <div className="album__year">{album.year}</div>
+            <img className="album__thumb" src={thumbnail} alt={album.thumbnail[0].alternativeText}/>
+            <Link href="/volume/[albumId]" as={`/volume/${album.albumNumber}`}>
+                <a className="album__details">
+                <div>היטמן - {album.albumNumber}</div>
+                {album.songs.map ((song,i)=> (<div key={song.id}>{i? ',': ''} {song.by}</div>))}
+                </a>
+            </Link>
+        </div>
+
     </li>
-)
+)}
 
 const Albums = ({albums}) => {
     return ( 
         <section className="albums">
             <ul>
-                {albums && albums.map(album =><Album  key={album.id} album={album} />)}
+                {albums && albums.map((album ,i) =><Album  key={album.id} album={album} index={i} />)}
             </ul>
         </section>
      );

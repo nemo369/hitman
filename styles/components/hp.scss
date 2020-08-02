@@ -1,0 +1,9 @@
+.hp {
+  &__legend {
+    background-color: $light-gray;
+    padding: 50px 50px 240px;
+    h2 {
+      margin: rem(0) 0 rem(20);
+    }
+  }
+}

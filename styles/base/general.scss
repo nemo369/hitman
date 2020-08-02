@@ -13,3 +13,6 @@ body {
   color: $black;
   background-color: $gray;
 }
+.container {
+  min-height: calc(100vh - 291px);
+}

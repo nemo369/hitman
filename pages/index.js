@@ -3,15 +3,13 @@ import Albums from '../components/Albums'
 
 export default function Home({albums}) {
   return (
-    <main className="container">
-      <article className="tac">
-        <h2 className="wordart blues">ישר ממכבש הלהיטים:</h2>
-        <h1 className="wordart rainbow">ברוכים הבאים להיטמן</h1>
-        <h2 className="wordart rainbow">אספנו עבורכם את כל מה שצריך לדעת על אוסף הלהיטים משנות ה90'</h2>
-      </article>
+    <div>
+      <legend className="hp__legend block">
+        <h2 className="wordart blues tac">ישר ממכבש הלהיטים:</h2>
+        <h2 className="wordart rainbow tac">אספנו עבורכם את כל מה שצריך לדעת על אוסף הלהיטים משנות ה90'</h2>
+      </legend>
       <Albums albums={albums}/>
-
-    </main>
+    </div>
   )
 }
 
