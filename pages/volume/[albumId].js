@@ -1,25 +1,13 @@
 import getConfig from 'next/config'
 import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
+import NoAlbum from '../../components/single/NoAlbum'
+import SingleAlbum from '../../components/single/SingleAlbum'
 const AlbumPage = ({album}) => {
     if(!album){
-        return (
-        <>
-            <h1 className="tac"> אוי לא, אין אלבום כזה</h1> 
-            <h2 className="tac"> 
-            <Link href="/">
-                <a>
-            נוסטלגיה יכולה להיות מתעתעת
-            ,<br /> אולי בעמוד הבית תמצא את האלבום שחיפשת
-                </a>
-                </Link>
-            </h2> 
-        </>
-        )
+        return <NoAlbum/>
     }
-    return ( <article>
-        {album.desc}
-    </article> );
+    return ( <SingleAlbum album={album}/> );
 }
  
 export default AlbumPage;

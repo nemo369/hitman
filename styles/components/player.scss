@@ -1,0 +1,53 @@
+.player {
+  width: rem(600);
+  margin: 40px auto;
+
+  .btns {
+    margin: 5px 0;
+  }
+  .pause {
+    width: 8px;
+    height: 8px;
+    border-style: solid;
+    border-color: #202020;
+    margin: 0 5px;
+    border-style: double;
+    display: inline-block;
+
+    border-width: 0px 6px 0px 0px;
+  }
+  .play {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 8px;
+    display: inline-block;
+    margin: 0 5px;
+
+    border-color: transparent transparent transparent #202020;
+  }
+  .stop {
+    min-width: 40px;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      bottom: 0;
+      width: 31%;
+      height: 51%;
+      background-color: #202020;
+    }
+  }
+  .window-body {
+    height: 500px;
+  }
+  iframe {
+    height: calc(100% - 60px);
+    margin-top: 5px;
+  }
+}

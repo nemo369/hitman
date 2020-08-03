@@ -1,0 +1,51 @@
+.cd {
+  padding: 25px 0 400px;
+
+  &__header {
+    max-width: rem(780);
+    margin: auto;
+    background-color: $light-gray;
+    padding: rem(25);
+    h3 {
+      font-size: rem(25);
+      font-family: "Pixelated MS Sans Serif", Arial;
+    }
+  }
+  &__title {
+    font-size: rem(32);
+    text-align: center;
+    max-width: 90%;
+    margin: auto auto rem(25);
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      width: 45%;
+      height: 2px;
+      background-color: $green;
+      margin: auto;
+      right: 0;
+      left: 0;
+    }
+  }
+  &__playlist {
+    svg {
+      width: 45px;
+      margin: 0 5px;
+      &:hover {
+        fill: $yellow;
+      }
+    }
+  }
+  &__article {
+    max-width: rem(1024);
+    padding: 10px 10px 10px 80px;
+    margin: rem(25) auto;
+    font-size: rem(18);
+    line-height: 1.4;
+    background: $light-gray;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
+      inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  }
+}

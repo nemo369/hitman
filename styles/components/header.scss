@@ -1,7 +1,13 @@
 .header {
-  padding: rem(10) rem(20) 0;
-  margin: auto;
-  max-width: 1280px;
+  // padding: rem(10) rem(20) 0;
+  background-color: $gray;
+  z-index: 98;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  // margin: auto;
+  // max-width: 1280px;
   &__hr {
     border: none;
     height: 1px;
@@ -21,9 +27,43 @@
   }
 
   &__h1 {
-    margin: rem(10) 0 rem(50);
+    margin: rem(10) 0 rem(10);
   }
   &__h2 {
     margin: 0 0 rem(30);
+  }
+}
+
+.header--placeholder {
+  height: 205px;
+}
+.header {
+  max-height: 250px;
+  transition: all 0.2s;
+  overflow: hidden;
+  .header__title {
+    transition: all 0.3s;
+    overflow: hidden;
+    max-height: 50px;
+  }
+}
+.header--open {
+  .header__title {
+    max-height: 105px;
+    opacity: 1;
+  }
+}
+.header--close {
+  max-height: 50px;
+  .header__title {
+    max-height: 0;
+    opacity: 0;
+  }
+  svg {
+    height: 38px;
+    margin: 5px 0 -4px;
+  }
+  .header__select {
+    display: none;
   }
 }

@@ -1,0 +1,59 @@
+.project-box__inner {
+  position: relative;
+  width: 220px;
+  margin: 42px auto 0;
+  padding-bottom: 18px;
+}
+.project-box__image {
+  text-align: center;
+  letter-spacing: -0.01em;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.project-box__image:hover {
+  z-index: 5;
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+.project-box__image__sleeve {
+  position: relative;
+  z-index: 3;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.project-box__image__vinyl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  transform-origin: left;
+}
+.project-box__image:hover .project-box__image__vinyl {
+  transform: translateX(-100px);
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 1.5s;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg) translateX(-100px);
+  }
+  to {
+    transform: rotate(360deg) translateX(-100px);
+  }
+}

@@ -18,7 +18,7 @@ const HeaderNav = () => {
             <Link href="/">
                 <a> <HitmanLogo width="80px"/> </a>
             </Link>
-            <select value={router.asPath} onChange={navigate}>
+            <select value={router.asPath} onChange={navigate} className="header__select">
             <option ></option>
                 {menuItems.map((item,i) =>(
                     <option key={i} value={item.url}>{item.name}</option>

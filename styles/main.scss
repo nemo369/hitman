@@ -9,6 +9,7 @@
 // Layout: Header, footer, grid, navigation
 
 // Pages: Have a single scss for each specific page
+@import "./pages/single_album.scss";
 
 // Vendor: handles 3rd party css
 // Components: have a single scss file for each individual component
@@ -16,5 +17,8 @@
 @import "./components/hp.scss";
 @import "./components/album.scss";
 @import "./components/footer.scss";
+@import "./components/spinnig_cd.scss";
+@import "./components/songs.scss";
+@import "./components/player.scss";
 
 @import "./mobile.scss";

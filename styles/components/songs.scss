@@ -1,0 +1,32 @@
+.songs {
+  max-width: rem(1024);
+  margin: rem(30) auto;
+  background-color: $light-gray;
+  padding: rem(30) 10px rem(230);
+}
+
+.track-number {
+  font-family: Impact, sans-serif;
+  font-size: rem(32);
+}
+
+.song-box {
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px grey,
+    inset 2px 2px #dfdfdf;
+  background-color: $gray;
+  padding: rem(25);
+  margin: 35px auto;
+  max-width: 85%;
+  &__links {
+    width: rem(150);
+    a {
+      margin: 0 rem(5);
+      filter: grayscale(10%);
+
+      transition: all 0.3s;
+      &:hover {
+        filter: grayscale(100%);
+      }
+    }
+  }
+}

@@ -4,10 +4,11 @@
   width: 100%;
 
   border-top: 2px solid #fff;
+  div {
+    height: 100%;
+  }
 
   .toolbar-start-menu {
-    float: left;
-
     .start-button {
       background: url(https://win98icons.alexmeub.com/icons/png/windows-0.png)
         no-repeat 2px center / 24px;
@@ -31,13 +32,7 @@
     height: 26px;
     margin-top: 2px;
     background: #797979;
-    float: left;
     border-right: 1px solid #fff;
-  }
-
-  .toolbar-left {
-    float: left;
-    padding: 0 5px;
   }
 
   .toolbar-icon {
@@ -53,13 +48,15 @@
     //   }
   }
 
-  .toolbar-right {
-    float: right;
+  .toolbar-center {
+    margin: 0 10px 0 auto;
+  }
+  .toolbar-left {
     margin: 2px 3px;
     height: 29px;
     border: 2px solid #7c7c7c;
     border-bottom-color: #fff;
-    border-right-color: #fff;
+    border-left-color: #fff;
 
     .time {
       padding: 6px 10px;
