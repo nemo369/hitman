@@ -10,6 +10,7 @@
 
 // Pages: Have a single scss for each specific page
 @import "./pages/single_album.scss";
+@import "./pages/rnd-song.scss";
 
 // Vendor: handles 3rd party css
 // Components: have a single scss file for each individual component
@@ -20,5 +21,8 @@
 @import "./components/spinnig_cd.scss";
 @import "./components/songs.scss";
 @import "./components/player.scss";
+@import "./components/bgs.scss";
+@import "./components/loader.scss";
+@import "./components/progress.scss";
 
 @import "./mobile.scss";

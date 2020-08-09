@@ -12,7 +12,7 @@ const AlbumPage = ({album}) => {
  
 export default AlbumPage;
 
-export async function  getServerSideProps(context) {
+export async function  getStaticProps(context) {
     const {albumId} = context.query;
     const { API_URL } = process.env
 

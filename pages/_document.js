@@ -12,7 +12,7 @@ class MyDocument extends Document {
                 <Head>
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
-                <body>
+                <body  style={{ backgroundImage: `url(/grid-bg.png)` }}>
                     <Main/>
                     <NextScript/>
                 </body>

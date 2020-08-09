@@ -5,7 +5,7 @@ import useDocumentScrollThrottled from "../contexts/useDocumentScrollThrottled "
 const Header = () => {
     const [shouldHideHeader, setShouldHideHeader] = useState(false);
   
-    const MINIMUM_SCROLL = 120;
+    const MINIMUM_SCROLL = 50;
     const TIMEOUT_DELAY = 5;
   
     useDocumentScrollThrottled(callbackData => {

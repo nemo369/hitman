@@ -1,0 +1,24 @@
+.loader {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: $gray;
+  .progress {
+    height: 35px;
+    width: 85%;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+      inset -2px -2px #dfdfdf, inset 2px 2px #8080;
+    margin: auto;
+    &__bars {
+      position: absolute;
+      width: 35%;
+      height: calc(100% - 4px);
+      top: 2px;
+      left: 0;
+      //   border-right: 75px dashed #0a246a;
+      background: linear-gradient(to right, transparent 50%, #0a246a 50%),
+        linear-gradient(to right, #0a246a, #0000);
+    }
+  }
+}

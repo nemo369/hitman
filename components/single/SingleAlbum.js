@@ -9,8 +9,8 @@ const SingleAlbum = ({ album }) => {
     const thumbnail = album.thumbnail[0].url;
 
     return (
-        <section className="cd" style={{ backgroundImage: `url(/bg-90s.webp)` }}>
-            <header className="cd__header flex nowrap">
+        <section className="cd">
+            <header className="cd__header flex nowrap box">
                 <div className="cd__data half">
                     <h1 className="cd__title">{album.title}</h1>
                     <h3>היטמן - {album.albumNumber}</h3>
@@ -31,7 +31,7 @@ const SingleAlbum = ({ album }) => {
                     </div>
                 </div>
             </header>
-            {album.youTubePlaylist && <Player listId={album.youTubePlaylist}/>}
+            {album.youTubePlaylist && <Player src={`https://www.youtube.com/embed/videoseries?list=${album.youTubePlaylist}`}/>}
             <Songs songs={album.songs} />
             <article className="cd__article" dangerouslySetInnerHTML={{ __html: album.desc }} />
 

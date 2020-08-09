@@ -1,6 +1,5 @@
 .header {
   // padding: rem(10) rem(20) 0;
-  background-color: $gray;
   z-index: 98;
   position: fixed;
   top: 0;
@@ -48,12 +47,14 @@
   }
 }
 .header--open {
+  background-color: #e7e7e7f7;
   .header__title {
     max-height: 105px;
     opacity: 1;
   }
 }
 .header--close {
+  background-color: $gray;
   max-height: 50px;
   .header__title {
     max-height: 0;

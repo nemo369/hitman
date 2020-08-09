@@ -3,6 +3,7 @@ import '98.css';
 import ContextWrapper from '../components/ContextWrapper';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
+import Bgs from '../components/Bgs';
 // import { DefaultSeo } from 'next-seo'
 // import SEO from '../next-seo.config'
 
@@ -17,11 +18,12 @@ const MyApp =({ Component, pageProps  }) =>{
         <ContextWrapper  navigation={navigation}>
             {/* <DefaultSeo {...SEO} /> */}
             <Header />
+        </ContextWrapper>
             <main  className="container">
                 <Component {...pageProps} />
             </main>
             <Footer/>
-        </ContextWrapper>
+            <Bgs />
         </>
     )
 }

@@ -1,0 +1,9 @@
+.rnd-song {
+  max-width: rem(1025);
+  padding: rem(10);
+  margin: rem(25) auto;
+  background-color: $light-gray;
+}
+.rnd-song__btn {
+  transform: translateY(-85px);
+}

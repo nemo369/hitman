@@ -1,0 +1,14 @@
+.bgs {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  .bg {
+    transition: all 0.7s ease-out;
+    top: 50px;
+    left: 50px;
+    position: absolute;
+  }
+}

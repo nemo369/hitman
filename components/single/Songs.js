@@ -5,7 +5,7 @@ const Songs = ({ songs }) => {
         return ''
     }
     return (
-        <section className="songs">
+        <section className="songs box">
             <h3 className="tac wordart blues flex center">
                 <span>רשימת השירים</span>
             </h3>
