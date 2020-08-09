@@ -10,7 +10,14 @@ const Loader = () => {
                     </div>
                 </div>
                 <div className="window-body">
-                   <div className="progress relative"><div className="progress__bars"></div></div>
+                    <div className="progress relative">
+                        <div className="progress__bars--wrapper full">
+                            <div className="progress__bars"></div>
+                            <div className="progress__bars"></div>
+                            <div className="progress__bars"></div>
+                            <div className="progress__bars"></div>
+                        </div>
+                    </div>
                 </div>
 
             </div>

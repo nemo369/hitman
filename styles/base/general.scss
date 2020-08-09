@@ -17,3 +17,7 @@ body {
 .container {
   min-height: calc(100vh - 291px);
 }
+
+#__next {
+  position: relative;
+}

@@ -9,6 +9,7 @@ const RandomSong = ({ allSongs }) => {
         addSong();
     }, []);
     const getRandomSong = () => {
+        console.log(allSongs);
         if (!allSongs.length) {
             return
         }
@@ -23,23 +24,29 @@ const RandomSong = ({ allSongs }) => {
         setLoader(true)
         if (newSong) {
             setSongs([...songs, newSong])
+            setTimeout(() => {
+                setLoader(false)
+            }, Math.floor(Math.random() * (3000 - 300) + 300));
         }
-        setTimeout(() => {
-            // setLoader(false)
-        }, 1500);
     }
 
+    const seo = seoMerge({
+        title: `שיר אקראי מכל אחד מאוספי הלהיטים של היטמן`,
+    });
     return (
-        <section className="box rnd-song relative">
-            {loader && <Loader/>}
-            {songs.length && songs[songs.length - 1] && <SongBox song={songs[songs.length - 1]} nextSong={getRandomSong} />}
-        </section>
+        <>
+            <NextSeo {...seo} />
+            <section className="box rnd-song relative">
+                {loader && <Loader />}
+                {songs.length && songs[songs.length - 1] && <SongBox song={songs[songs.length - 1]} nextSong={addSong} />}
+            </section>
+        </>
     );
 }
 
 
 const SongBox = ({ song, nextSong }) => {
-    const urlId = song.links.youtube.split('watch?v=')[1]
+    const urlId = song.links?.youtube.split('watch?v=')[1]
     const src = `https://www.youtube.com/embed/${urlId}`
     return (
         <div className="relative ofh">

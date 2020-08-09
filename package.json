@@ -12,6 +12,7 @@
     "dotenv": "^8.2.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.4.4",
+    "next-seo": "^4.7.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.26.10"

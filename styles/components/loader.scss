@@ -10,15 +10,41 @@
     box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
       inset -2px -2px #dfdfdf, inset 2px 2px #8080;
     margin: auto;
+    overflow: hidden;
     &__bars {
       position: absolute;
-      width: 35%;
+      width: 25px;
       height: calc(100% - 4px);
       top: 2px;
       left: 0;
-      //   border-right: 75px dashed #0a246a;
-      background: linear-gradient(to right, transparent 50%, #0a246a 50%),
-        linear-gradient(to right, #0a246a, #0000);
+      background-color: #0a246a;
+      &:nth-child(1) {
+        left: 0;
+      }
+      &:nth-child(2) {
+        left: 27px;
+      }
+      &:nth-child(3) {
+        left: 54px;
+      }
+      &:nth-child(4) {
+        left: 82px;
+      }
     }
+  }
+}
+
+.progress__bars--wrapper {
+  animation: linear infinite;
+  animation-name: run;
+  animation-duration: 3s;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
