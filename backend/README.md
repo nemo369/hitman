@@ -1,3 +1,0 @@
-# Hitman Backend
-
-strapi application

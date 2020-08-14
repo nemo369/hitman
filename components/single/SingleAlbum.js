@@ -6,7 +6,7 @@ import Player from "./Player";
 const SingleAlbum = ({ album }) => {
 
     const { API_URL } = process.env
-    const thumbnail = album.thumbnail[0].url;
+    const thumbnail = album.thumbnail.url;
 
     return (
         <section className="cd">
@@ -26,7 +26,7 @@ const SingleAlbum = ({ album }) => {
                 </div>
                 <div className="project-box__inner">
                     <div className="project-box__image">
-                        <img className="album__thumb" src={API_URL + thumbnail} alt={album.thumbnail[0].alternativeText} />
+                        <img className="album__thumb" src={API_URL + thumbnail} alt={album.thumbnail.alternativeText} />
                         <img className="project-box__image__vinyl" src="/compact_disc.svg" />
                     </div>
                 </div>
