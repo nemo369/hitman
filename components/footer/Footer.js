@@ -31,6 +31,13 @@ const Footer = () => {
             <div className="toolbar-start-menu relative">
                 <button className="start-button" onClick={toglleInfo}>התחל</button>
                 <section className={`box info ${info? 'open' : ''}`}>
+                    <h5>המון תודות ל</h5>
+                    <p>
+                        לבלוג המדהים 
+                        <a href="http://osafim.blogspot.com/2010/08/blog-post_25.html">אוספים, אומרים שהיה פה שמח</a>
+                        ולעמוד הפייסבוק המדליק
+                        <a href="https://www.facebook.com/hitman90s/">היטמן Hitman</a>
+                    </p>
                         <h5>אודות:</h5>
                     <p>
                         אתר זה נבנה לטובת הציבור הרחב ומתוך נוסטלגיה לשנות ה90 ואלבומי ההיטמן האדירים של הד ארצי. אם חסרה אינפורמציה, נפגעו זכויות יוצרים או שסתם בא לכם לחלוק קרדיט אשמח שתצרו איתי קשר

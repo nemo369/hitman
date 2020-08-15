@@ -41,7 +41,6 @@ const Albums = ({ albums }) => {
     useEffect(() => {
             if(process.browser){
                 setisGrid(!!(window.innerWidth < 960));
-                console.log(!!(window.innerWidth < 960));
             }
     }, [])
    

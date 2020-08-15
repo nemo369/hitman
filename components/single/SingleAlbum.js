@@ -29,7 +29,7 @@ const SingleAlbum = ({ album }) => {
             </header>
             {album.youTubePlaylist && <Player src={`https://www.youtube.com/embed/videoseries?list=${album.youTubePlaylist}`}/>}
             <Songs songs={album.songs} />
-            <article className="cd__article" dangerouslySetInnerHTML={{ __html: album.desc }} />
+            <article className="cd__article" dangerouslySetInnerHTML={{ __html: album.description }} />
 
         </section>
     );
