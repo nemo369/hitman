@@ -27,19 +27,9 @@ const navigation = [
 
 const MyApp = ({ Component, pageProps }) => {
     Router.onRouteChangeStart = () => {
-        console.log('onRouteChnageStart triggered');
         setisLoader(true)
-
     };
-
     Router.onRouteChangeComplete = () => {
-        console.log('onRouteChnageComplete triggered');
-        setisLoader(false)
-
-    };
-
-    Router.onRouteChangeError = () => {
-        console.log('onRouteChnageError triggered');
         setisLoader(false)
     };
     const [isLoader, setisLoader] = useState(false)

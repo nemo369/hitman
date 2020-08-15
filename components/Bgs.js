@@ -24,7 +24,7 @@ const Bgs = () => {
 
     const gernateStyles = () => {
         const styles = [];
-        const tops = shuffle([...new Array(50)].map((x,i)=> (i*2)));
+        const tops = shuffle([...new Array(50)].map((x,i)=> (i*4)));
         const rights = shuffle([...new Array(48)].map((x,i)=> (i*2)));
         for (let index = 0; index < shapes.length; index++) {
             let top =tops[0]
@@ -35,7 +35,7 @@ const Bgs = () => {
                 width: `${randNum(1,35)}em`,
                 top: `${top}%`,
                 right: `${right}%`,
-                transition: `all ${randNum(0.1, 7)}s`
+                transition: `all ${randNum(0.1, 7)}s`,
             })
         }
         setStyle(styles);
