@@ -33,7 +33,7 @@ const RandomSong = ({ allSongs }) => {
     }
 
     const seo = seoMerge({
-        title: `שיר אקראי מכל אחד מאוספי הלהיטים של היטמן`,
+        title: `שיר אקראי מאחד מאוספי הלהיטים של היטמן`,
     });
     return (
         <>
@@ -72,7 +72,7 @@ const SongBox = ({ song, nextSong }) => {
 
 export default RandomSong;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const { API_URL } = process.env
 
     const res = await fetch(`${API_URL}/songs`)
