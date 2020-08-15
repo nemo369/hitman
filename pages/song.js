@@ -82,6 +82,7 @@ export async function getStaticProps() {
         props: {
             allSongs,
         },
+        revalidate: 1000
     }
 }
 

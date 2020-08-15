@@ -1,0 +1,13 @@
+button {
+  transition: all 0.2s;
+}
+
+button:hover {
+  box-shadow: inset -2px -2px #0a0a0a, inset 2px 2px #fff, inset -2px -2px grey,
+    inset 2px 2px #dfdfdf;
+  background-color: rgb(177, 176, 176);
+}
+
+a:hover {
+  text-decoration: none;
+}

@@ -13,6 +13,9 @@
 @import "./pages/rnd-song.scss";
 
 // Vendor: handles 3rd party css
+@import "./vendor/98.scss";
+@import "./vendor/grid-view.scss";
+
 // Components: have a single scss file for each individual component
 @import "./components/header.scss";
 @import "./components/hp.scss";

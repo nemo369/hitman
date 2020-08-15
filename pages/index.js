@@ -5,9 +5,9 @@ import Link from 'next/link'
 export default function Home({ albums }) {
   return (
     <div>
-      <legend className="hp__legend block">
+      <legend className="hp__legend block box">
         <h2 className="wordart blues tac">ישר ממכבש הלהיטים:</h2>
-        <h1 className="wordart rainbow tac">אספנו עבורכם את כל מה שצריך לדעת על היטמן, אוסף הלהיטים משנות ה90'</h1>
+        <h1 className="wordart rainbow tac">אספנו עבורכם את כל מה שצריך לדעת על היטמן, אוסף הלהיטים משנות ה-90'</h1>
       </legend>
       <div className="tac random-btn">
         <button>
@@ -31,6 +31,7 @@ export async function getStaticProps() {
     props: {
       albums,
     },
+    revalidate: 1000
   }
 }
 

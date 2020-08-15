@@ -1,0 +1,57 @@
+.view-mode--toggle--list-grid {
+  cursor: pointer;
+}
+
+.view-mode--toggle--icon {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.view-mode--toggle--icon-bar {
+  position: relative;
+  width: 40px;
+  height: 10px;
+  margin: 0 auto 5px auto;
+  background: $black;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+.view-mode--toggle--icon-bar:last-child {
+  margin-bottom: 0;
+}
+.view-mode--toggle--icon-bar::before,
+.view-mode--toggle--icon-bar::after {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: $black;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+.view-mode--toggle--icon-bar::before {
+  left: -15px;
+}
+.view-mode--toggle--icon-bar::after {
+  right: -15px;
+}
+
+.view-mode--toggle--icon-grid .view-mode--toggle--icon-bar {
+  width: 10px;
+}
+.view-mode--toggle--icon-grid .view-mode--toggle--icon-bar::before,
+.view-mode--toggle--icon-grid .view-mode--toggle--icon-bar::after {
+  opacity: 1;
+}
+.view-mode--toggle--icon-grid .view-mode--toggle--icon-bar::before {
+  left: 0;
+  -webkit-transform: translateX(-15px);
+  transform: translateX(-15px);
+}
+.view-mode--toggle--icon-grid .view-mode--toggle--icon-bar::after {
+  right: 0;
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+}

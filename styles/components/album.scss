@@ -1,8 +1,6 @@
 .album {
-  max-width: rem(960);
-  margin: 0 auto 75px;
+  // margin: 0 auto 75px;
   padding: rem(50);
-
   &__body {
     grid-template-columns: rem(80) rem(150) 1fr;
     grid-template-rows: 150px;
@@ -34,5 +32,28 @@
 }
 
 .albums {
-  margin-top: -130px;
+  max-width: rem(960);
+  margin: auto;
+  margin-top: -175px;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.albums__ul {
+  grid-template-columns: 1fr;
+  display: grid;
+  transition: all 0.2s;
+  grid-gap: 75px;
+}
+.albums--grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 75px;
+
+  .album__body {
+    display: block;
+  }
+  .album__details,
+  .album__year {
+    display: none;
+  }
 }

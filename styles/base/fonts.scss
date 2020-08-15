@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap");
-
-$font: "David Libre', serif";
+@import url("https://fonts.googleapis.com/css2?family=Suez+One:wght@400;700");
+$font: "Suez One", sans-serif;
 body {
-  font-family: $font !important;
+  font-family: $font;
 }
 
 h1,
 h2,
 h3,
 button {
+  font-family: $font;
   font-weight: 700;
 }
 

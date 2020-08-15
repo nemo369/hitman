@@ -30,13 +30,10 @@
   }
   .album__thumb {
     box-shadow: unset;
-    padding: 25px 75px;
+    padding: 0;
   }
   .project-box__inner {
     overflow: hidden;
-    .album__thumb {
-      padding: 0;
-    }
   }
   .song-box__links {
     margin: auto;
@@ -49,5 +46,8 @@
     .window {
       width: 100%;
     }
+  }
+  .albums--grid {
+    grid-gap: 2px;
   }
 }

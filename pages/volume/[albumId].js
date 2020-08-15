@@ -36,6 +36,7 @@ export async function getStaticProps(context) {
     props: {
       album
     },
+    revalidate: 1000
   }
 }
 
