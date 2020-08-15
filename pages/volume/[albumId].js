@@ -31,10 +31,10 @@ export async function getStaticProps(context) {
 
   const res = await fetch(`${API_URL}/albums?albumNumber=${albumId}`)
   const albumData = await res.json();
-  const album = albumData.find(album => album.albumNumber === albumId)
+  const album = albumData.find(album => album.albumNumber === albumId) || null
   return {
     props: {
-      album: album ? album : null
+      album
     },
   }
 }

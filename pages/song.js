@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Player from "../components/rndSong/Player"
 import Loader from "../components/rndSong/Loader";
+import { seoMerge } from '../next-seo.config'
+import { NextSeo } from "next-seo";
 
 const RandomSong = ({ allSongs }) => {
     const [songs, setSongs] = useState([])
@@ -60,7 +62,7 @@ const SongBox = ({ song, nextSong }) => {
                 <span>{song.title}</span>
             </h2>
             <h3 className="tac">
-                <span>שיר מספר {song.trackNumber} מתוך : </span>
+                <span>שיר מספר {song.trackNumber} מתוך: </span>
                 <span>היטמן - {song.album.albumNumber}</span>
                 {/* <span className="year">ב: {song.album.year}</span> */}
             </h3>

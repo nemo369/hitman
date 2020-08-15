@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 const Album = ({album , index}) =>{ 
-    const { API_URL } = process.env
-    const thumbnail = album.thumbnail[0]?.formats.thumbnail.url;
+    // const { API_URL } = process.env
+    const thumbnail = album.thumbnail?.formats.thumbnail.url;
 
     
     return(
@@ -19,11 +19,11 @@ const Album = ({album , index}) =>{
         </div>
         <div className="window-body album__body">
             <div className="album__year">{album.year}</div>
-            <img className="album__thumb" src={API_URL + thumbnail} alt={album.thumbnail[0].alternativeText}/>
+            <img className="album__thumb" src={thumbnail} alt={album.thumbnail?.alternativeText}/>
             <Link href="/volume/[albumId]" as={`/volume/${album.albumNumber}`}>
                 <a className="album__details">
                 <div>היטמן - {album.albumNumber}</div>
-                {album.songs.map ((song,i)=> (<div key={song.id}>{i? ',': ''} {song.by}</div>))}
+                <div>{album.songs.map ((song,i)=> (<span key={song.id}>{i? ',': ''} {song.by}</span>))}</div>
                 </a>
             </Link>
         </div>

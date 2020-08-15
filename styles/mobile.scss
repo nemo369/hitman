@@ -12,4 +12,42 @@
   .mobile {
     display: block;
   }
+  .hp__legend {
+    padding: 50px 10px 300px;
+  }
+  .hp__legend h1 {
+    font-size: 28px;
+    line-height: 1.05;
+  }
+  .hp__legend h2 {
+    font-size: 20px;
+  }
+  .bgs {
+    font-size: 6px;
+  }
+  .album__body {
+    display: block;
+  }
+  .album__thumb {
+    box-shadow: unset;
+    padding: 25px 75px;
+  }
+  .project-box__inner {
+    overflow: hidden;
+    .album__thumb {
+      padding: 0;
+    }
+  }
+  .song-box__links {
+    margin: auto;
+  }
+  .player .window-body {
+    height: auto;
+  }
+  .rnd-song {
+    max-width: 99%;
+    .window {
+      width: 100%;
+    }
+  }
 }

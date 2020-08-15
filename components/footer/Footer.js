@@ -30,7 +30,12 @@ const Footer = () => {
 
             <div className="toolbar-start-menu relative">
                 <button className="start-button" onClick={toglleInfo}>התחל</button>
-                <section className={`info ${info? 'open' : ''}`}>INFO</section>
+                <section className={`box info ${info? 'open' : ''}`}>
+                        <h5>אודות:</h5>
+                    <p>
+                        אתר זה נבנה לטובת הציבור הרחב ומתוך נוסטלגיה לשנות ה90 ואלבומי הטימן. אם חסרה אינפורמציה, נפגעו זכויות יוצרים או שסתם בא לכם לחלוק קרדיט אשמח שתצרו איתי קשר
+                    </p>
+                </section>
             </div>
 
 
@@ -60,7 +65,7 @@ const Footer = () => {
 
             <div className="toolbar-left">
                 <div className="time">
-                    <span className="hour">{time.getHours()}</span>
+                    <span className="hour">{time.getHours() >12 ? time.getHours()-12 : time.getHours()}</span>
         :
         <span className="minutes">{time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()}</span>
                     {time.getHours() >= 12 ? 'PM' : 'AM'}

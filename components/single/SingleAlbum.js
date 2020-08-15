@@ -4,10 +4,6 @@ import Spotify from "../svg/Spotify";
 import Player from "./Player";
 
 const SingleAlbum = ({ album }) => {
-
-    const { API_URL } = process.env
-    const thumbnail = album.thumbnail.url;
-
     return (
         <section className="cd">
             <header className="cd__header flex nowrap box">
@@ -26,7 +22,7 @@ const SingleAlbum = ({ album }) => {
                 </div>
                 <div className="project-box__inner">
                     <div className="project-box__image">
-                        <img className="album__thumb" src={API_URL + thumbnail} alt={album.thumbnail.alternativeText} />
+                        {album.thumbnail && <img className="album__thumb" src={ album.thumbnail.url} alt={album.thumbnail.alternativeText} />}
                         <img className="project-box__image__vinyl" src="/compact_disc.svg" />
                     </div>
                 </div>
