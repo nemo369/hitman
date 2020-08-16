@@ -1,5 +1,5 @@
 const Player = ({ src }) => {
- 
+ console.log(src);
     return (
         <div className="player window">
             <div className="title-bar">
