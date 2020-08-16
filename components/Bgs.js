@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { shapes } from "./contexts/shapes";
+import { SHAPES } from "./contexts/shapes";
 
 const Bgs = () => {
     const router = useRouter()
     const [styles, setStyle] = useState([]);
+    const [shapes, setShapes] = useState([...SHAPES]);
 
-    // const shapes = shapes;
     const randNum = (min = 0, max = 100) => {
         return Math.round(Math.random() * (max - min) + min);
     }
 
     useEffect(() => {
-        gernateStyles()
+        gernateStyles();
+        setShapes([shuffle(SHAPES),shuffle(SHAPES),shuffle(SHAPES)].flat())
         router.events.on('routeChangeComplete', gernateStyles)
     }, []);
 
@@ -32,10 +33,11 @@ const Bgs = () => {
             let right =rights[0]
             rights.shift()
             styles.push({
-                width: `${randNum(1,35)}em`,
-                top: `${top}%`,
-                right: `${right}%`,
-                transition: `all ${randNum(0.1, 7)}s`,
+                width: `25em`,
+                // top: `${top}%`,
+                // right: `${right}%`,
+                transition: `all ${randNum(0.1, 0.7)}s`,
+                transform:` translate(${randNum(-100,100)}px, ${randNum(-100,100)}px) scale(${randNum(0.5,1.5)})`
             })
         }
         setStyle(styles);
@@ -44,7 +46,7 @@ const Bgs = () => {
 
     return (
         <div className="bgs">
-            {shapes.map((shape, i) => (
+            { shapes.map((shape, i) => (
                 <div
                     key={i}
                     dangerouslySetInnerHTML={{ __html: shape }}

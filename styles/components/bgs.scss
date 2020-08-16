@@ -7,11 +7,9 @@
   left: 0;
   font-size: 20px;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
   .bg {
     transition: all 0.7s ease-out;
-    top: 50px;
-    left: 50px;
-    position: absolute;
-    width: 15px;
   }
 }

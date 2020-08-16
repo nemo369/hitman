@@ -4,6 +4,9 @@ import Spotify from "../svg/Spotify";
 import Player from "./Player";
 
 const SingleAlbum = ({ album }) => {
+    const spotifyUid = album.spotifyPlaylist?  album.spotifyPlaylist.replace(`.com/`, `.com/embed/`): '';
+    console.log(spotifyUid);
+    const player = album.youTubePlaylist ? `https://www.youtube.com/embed/videoseries?list=${album.youTubePlaylist}` : spotifyUid
     return (
         <section className="cd">
             <header className="cd__header flex nowrap box">
@@ -27,7 +30,7 @@ const SingleAlbum = ({ album }) => {
                     </div>
                 </div>
             </header>
-            {album.youTubePlaylist && <Player src={`https://www.youtube.com/embed/videoseries?list=${album.youTubePlaylist}`}/>}
+            {album.youTubePlaylist || spotifyUid && <Player src={player}/>}
             <Songs songs={album.songs} />
             <article className="cd__article" dangerouslySetInnerHTML={{ __html: album.description }} />
 
