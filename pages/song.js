@@ -3,6 +3,7 @@ import Player from "../components/rndSong/Player"
 import Loader from "../components/rndSong/Loader";
 import { seoMerge } from '../next-seo.config'
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 
 const RandomSong = ({ allSongs }) => {
     const [songs, setSongs] = useState([])
@@ -52,19 +53,25 @@ const SongBox = ({ song, nextSong }) => {
     const src = `https://www.youtube.com/embed/${urlId}`
     return (
         <div className="relative ofh">
-            <Player src={src} />
-            <div className="tac rnd-song__btn">
-                <button onClick={nextSong}>צרבתי כבר את השיר הזה, אפשר שיר אחר?</button>
-            </div>
-            <h2 className="tac">
+             <h2 className="tac">
                 <span>{song.by}</span>
                 <span> - </span>
                 <span>{song.title}</span>
             </h2>
+            <Player src={src} />
+            <div className="tac rnd-song__btn">
+                <button onClick={nextSong}>צרבתי כבר את השיר הזה, אפשר שיר אחר?</button>
+            </div>
+           
             <h3 className="tac">
-                <span>שיר מספר {song.trackNumber} מתוך: </span>
-                <span>היטמן - {song.album.albumNumber}</span>
-                {/* <span className="year">ב: {song.album.year}</span> */}
+                <div>שיר מספר {song.trackNumber} מתוך</div>
+                <div>
+                    <Link href="/volume/[albumId]" as={`/volume/${song.album.albumNumber}`}>
+                        <a>היטמן - {song.album.albumNumber}</a>
+                    </Link>
+
+                </div>
+                <div className="year">- {song.album.year} -</div>
             </h3>
         </div>
     );

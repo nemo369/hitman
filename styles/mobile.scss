@@ -57,4 +57,28 @@
   .player {
     width: 98%;
   }
+
+  .view-mode--toggle--list-grid {
+    padding: 20px;
+  }
+  .albums__ul {
+    padding: 0 15px;
+    margin-top: 30px;
+  }
+  .cd {
+    padding: 0 15px;
+  }
+  .song-box {
+    align-items: center;
+    flex-direction: column;
+    &__links,
+    h2 {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  .track-number {
+    width: 100%;
+    border: 0;
+  }
 }

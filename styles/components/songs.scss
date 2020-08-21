@@ -6,8 +6,12 @@
 }
 
 .track-number {
-  font-family: Impact, sans-serif;
+  font-family: "Pixelated MS Sans Serif", Arial;
+
   font-size: rem(32);
+  border-left: 3px solid $black;
+  margin-left: 15px;
+  flex: 0 0 rem(35);
 }
 
 .song-box {
@@ -18,7 +22,8 @@
   margin: 35px auto;
   max-width: 85%;
   &__links {
-    width: rem(150);
+    flex: 1;
+    max-width: rem(150);
     a {
       margin: 0 rem(5);
       filter: grayscale(10%);
@@ -28,5 +33,17 @@
         filter: grayscale(100%);
       }
     }
+  }
+  h2 {
+    font-size: rem(26);
+    font-weight: 400;
+    b {
+      font-weight: 700;
+    }
+  }
+  h3 {
+    font-weight: 400;
+    font-size: rem(20);
+    font-family: "Pixelated MS Sans Serif", Arial;
   }
 }

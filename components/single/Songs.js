@@ -11,9 +11,9 @@ const Songs = ({ songs }) => {
             </h3>
             {songs.map((song) => (
                 <div key={song.id} className="song-box flex">
-                    <div className="track-number">{song.trackNumber}</div>
-                    <h5><b>{song.by} </b>- {song.title}</h5>
-                    <h5 className="impact">{secToDisplay(song.duration)}</h5>
+                    <div className="track-number">{song.trackNumber} </div>
+                    <h2><b>{song.by} </b>- {song.title}</h2>
+                    <h3 className="impact">{secToDisplay(song.duration)}</h3>
                     <div className="song-box__links flex nowrap">
                         {song.links && Object.entries(song.links).map(([key, value]) => (
                             <a key={key} href={value} target="_blank" rel="noopener">

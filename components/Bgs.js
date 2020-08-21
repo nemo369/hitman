@@ -37,7 +37,7 @@ const Bgs = () => {
                 // top: `${top}%`,
                 // right: `${right}%`,
                 transition: `all ${randNum(0.1, 0.7)}s`,
-                transform:` translate(${randNum(-100,100)}px, ${randNum(-100,100)}px) scale(${randNum(0.5,1.5)})`
+                transform:` translate(${randNum(-150,50)}px, ${randNum(-100,100)}px) scale(${randNum(0.5,1.5)})`
             })
         }
         setStyle(styles);

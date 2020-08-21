@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <>
         <header  className={`header ${style}`}>
-            <div className="tac header__title">
+            <div className="tac header__title desktop">
                 <h2 className="wordart rainbow header__h1">ברוכים הבאים להיטמן</h2>
             </div>
             <HeaderNav />
