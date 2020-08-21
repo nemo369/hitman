@@ -49,8 +49,13 @@ const RandomSong = ({ allSongs }) => {
 
 
 export const SongBox = ({ song, nextSong }) => {
-    const urlId = song.links?.youtube.split('watch?v=')[1]
-    const src = `https://www.youtube.com/embed/${urlId}`
+    let urlId = song.links?.youtube.split('watch?v=')[1]
+    urlId = urlId.split('&')[0]
+    let src = ``;
+    src= `https://www.youtube.com/embed/${urlId}`;
+    if(!song.links.youtube){
+        src= song.links.spotify.replace(`.com/`, `.com/embed/`)
+    }
     return (
         <div className="relative ofh">
             <h2 className="tac">
