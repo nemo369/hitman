@@ -48,31 +48,34 @@ const RandomSong = ({ allSongs }) => {
 }
 
 
-const SongBox = ({ song, nextSong }) => {
+export const SongBox = ({ song, nextSong }) => {
     const urlId = song.links?.youtube.split('watch?v=')[1]
     const src = `https://www.youtube.com/embed/${urlId}`
     return (
         <div className="relative ofh">
-             <h2 className="tac">
+            <h2 className="tac">
                 <span>{song.by}</span>
                 <span> - </span>
                 <span>{song.title}</span>
             </h2>
             <Player src={src} />
-            <div className="tac rnd-song__btn">
-                <button onClick={nextSong}>צרבתי כבר את השיר הזה, אפשר שיר אחר?</button>
-            </div>
-           
-            <h3 className="tac">
-                <div>שיר מספר {song.trackNumber} מתוך</div>
-                <div>
-                    <Link href="/volume/[albumId]" as={`/volume/${song.album.albumNumber}`}>
-                        <a>היטמן - {song.album.albumNumber}</a>
-                    </Link>
-
+            {nextSong &&
+                <div className="tac rnd-song__btn">
+                    <button onClick={nextSong}>צרבתי כבר את השיר הזה, אפשר שיר אחר?</button>
                 </div>
-                <div className="year">- {song.album.year} -</div>
-            </h3>
+            }
+            {song.album.trackNumber &&
+                <h3 className="tac">
+                    <div>שיר מספר {song.trackNumber} מתוך</div>
+                    <div>
+                        <Link href="/volume/[albumId]" as={`/volume/${song.album.albumNumber}`}>
+                            <a>היטמן - {song.album.albumNumber}</a>
+                        </Link>
+
+                    </div>
+                    <div className="year">- {song.album.year} -</div>
+                </h3>
+            }
         </div>
     );
 }

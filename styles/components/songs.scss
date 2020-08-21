@@ -9,8 +9,9 @@
   font-family: "Pixelated MS Sans Serif", Arial;
 
   font-size: rem(32);
-  border-left: 3px solid $black;
+  border-left: 1px solid $green;
   margin-left: 15px;
+  color: $green;
   flex: 0 0 rem(35);
 }
 
@@ -37,8 +38,11 @@
   h2 {
     font-size: rem(26);
     font-weight: 400;
+    text-align: center;
+    direction: ltr;
     b {
       font-weight: 700;
+      color: rgb(36, 36, 36);
     }
   }
   h3 {

@@ -7,6 +7,15 @@ export const seoObj = {
         // url: 'https://www.nextmovies.test',
         site_name: 'Hitman - היטמן',
     },
+    images: [
+       
+        {
+          url: 'https://hitman.co.il/hitman.png',
+          width: 220,
+          height: 220,
+          alt: 'כל אלבומי היטמן',
+        },
+      ],
 };
 
 
