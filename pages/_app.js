@@ -11,7 +11,7 @@ import { useState } from 'react'
 
 
 const navigation = [
-    { url: '/volume/10', name: 'Hitman vol.10' },
+{ url: '/volume/10', name: 'Hitman vol.10' },
     { url: '/volume/9', name: 'Hitman vol.9' },
     { url: '/volume/8', name: 'Hitman vol.8' },
     { url: '/volume/7', name: 'Hitman vol.7' },

@@ -9,7 +9,7 @@ const HeaderNav = () => {
     const { menuItems } = useContext(HeaderContext);
     const navigate = (event)=>{
         if( event.target.value){
-            router.push('/volume/[albumId]', event.target.value, { shallow: true });
+            router.push('/volume/[albumId]', event.target.value, { shallow: false });
         }
     }
     return ( 
