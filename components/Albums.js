@@ -27,8 +27,8 @@ const Album = ({ album, index }) => {
                 </Link>
                 <Link href="/volume/[albumId]" as={`/volume/${album.albumNumber}`}>
                     <a className="album__details">
-                        <div>היטמן - {album.albumNumber}</div>
-                        <div>{album.songs.map((song, i) => (<span key={song.id}>{i ? ',' : ''} {song.by}</span>))}</div>
+                        <div style={{fontSize:'22px'}}>היטמן - {album.albumNumber}</div>
+                        <div className="album__songs">{album.songs.map((song, i) => (<span key={song.id}>{i ? ',' : ''} {song.by}</span>))}</div>
                     </a>
                 </Link>
             </div>
