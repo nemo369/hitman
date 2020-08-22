@@ -10,10 +10,18 @@ class MyDocument extends Document {
         return (
             <Html dir="rtl">
                 <Head>
+
                     <script
-                        dangerouslySetInnerHTML={{
-                            __html: `<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175979529-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-175979529-1'); </script>`
-                        }}
+                        async
+                        src="https://www.googletagmanager.com/gtag/js?id=UA-175979529-1"
+                    />
+
+                    <script
+                        dangerouslySetInnerHTML={
+                            {
+                                __html: `window.dataLayer = window.dataLayer || 
+                            [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-175979529-1');`
+                            }}
                     />
                     <meta property="og:image" content="https://hitman.co.il/hitman.png" />
                     <link rel="icon" href="/favicon.ico" />
