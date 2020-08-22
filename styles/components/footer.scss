@@ -102,3 +102,13 @@ div.shares {
   max-height: 100vh;
   padding: 25px 10px 50px;
 }
+
+.github-link {
+  height: 27px;
+  width: 23px;
+  overflow: hidden;
+  max-width: unset;
+  svg {
+    margin: auto;
+  }
+}

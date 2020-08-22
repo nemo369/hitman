@@ -2,10 +2,13 @@ import Songs from "./Songs";
 import YouTube from "../svg/YouTube";
 import Spotify from "../svg/Spotify";
 import Player from "./Player";
+import Showdown from "showdown";
 
 const SingleAlbum = ({ album }) => {
-    const spotifyUid = album.spotifyPlaylist?  album.spotifyPlaylist.replace(`.com/`, `.com/embed/`): '';
-    const player = album.youTubePlaylist ? `https://www.youtube.com/embed/videoseries?list=${album.youTubePlaylist}` : spotifyUid
+    const converter = new Showdown.Converter();
+    const html = converter.makeHtml(album.description);
+    const spotifyUid = album.spotifyPlaylist ? album.spotifyPlaylist.replace(`.com/`, `.com/embed/`) : '';
+    const player = album.youTubePlaylist ? `https://www.youtube.com/embed/videoseries?list=${album.youTubePlaylist}` : spotifyUid;
     return (
         <section className="cd">
             <header className="cd__header flex nowrap box">
@@ -24,14 +27,14 @@ const SingleAlbum = ({ album }) => {
                 </div>
                 <div className="project-box__inner">
                     <div className="project-box__image">
-                        {album.thumbnail && <img className="album__thumb" src={ album.thumbnail.url} alt={album.thumbnail.alternativeText} />}
+                        {album.thumbnail && <img className="album__thumb" src={album.thumbnail.url} alt={album.thumbnail.alternativeText} />}
                         <img className="project-box__image__vinyl" src="/compact_disc.svg" />
                     </div>
                 </div>
             </header>
-            {(album.youTubePlaylist || spotifyUid) && <Player src={player}/>}
+            {(album.youTubePlaylist || spotifyUid) && <Player src={player} />}
             <Songs songs={album.songs} />
-            <article className="cd__article" dangerouslySetInnerHTML={{ __html: album.description }} />
+            <article className="cd__article" dangerouslySetInnerHTML={{ __html: html }} />
 
         </section>
     );
