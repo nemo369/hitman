@@ -12,7 +12,6 @@ const RandomSong = ({ allSongs }) => {
         addSong();
     }, []);
     const getRandomSong = () => {
-        console.log(allSongs);
         if (!allSongs.length) {
             return
         }
@@ -90,7 +89,7 @@ export default RandomSong;
 export async function getStaticProps() {
     const { API_URL } = process.env
 
-    const res = await fetch(`${API_URL}/songs`)
+    const res = await fetch(`${API_URL}/songs?_limit=200`)
     const allSongs = await res.json()
 
     return {

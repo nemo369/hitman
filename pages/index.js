@@ -24,7 +24,7 @@ export default function Home({ albums }) {
 export async function getStaticProps() {
   const { API_URL } = process.env
 
-  const res = await fetch(`${API_URL}/albums`)
+  const res = await fetch(`${API_URL}/albums?_sort=year:ASC`)
   const albums = await res.json()
 
   return {
