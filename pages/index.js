@@ -7,12 +7,12 @@ export default function Home({ albums }) {
     <div>
       <legend className="hp__legend block box">
         <h2 className="wordart blues tac">ישר ממכבש הלהיטים:</h2>
-        <h1 className="wordart rainbow tac">אספנו עבורכם את כל מה שצריך לדעת על היטמן, אוסף הלהיטים משנות ה-90'</h1>
+        <h1 className="wordart rainbow tac">אספנו בשבילך את כל מה שצריך לדעת על היטמן, אוסף הלהיטים משנות ה-90'</h1>
       </legend>
       <div className="tac random-btn">
         <button>
           <Link href="/song">
-          <a>קבל שיר רנדומלי</a>
+          <a>תנו לי שיר רנדומלי</a>
           </Link>
           </button>
       </div>
