@@ -33,11 +33,5 @@ const prettier = require('prettier');
         </urlset>
     `;
 
-  // If you're not using Prettier, you can remove this.
-  const formatted = prettier.format(sitemap, {
-    ...prettierConfig,
-    parser: 'html'
-  });
-
   fs.writeFileSync('public/sitemap.xml', formatted);
 })();
