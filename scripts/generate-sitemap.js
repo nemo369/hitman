@@ -24,7 +24,7 @@ const globby = require('globby');
 
                 return `
                         <url>
-                            <loc>${`https://yoursitehere.com${route}`}</loc>
+                            <loc>${`hitman.co.il/${route}`}</loc>
                         </url>
                     `;
               })
