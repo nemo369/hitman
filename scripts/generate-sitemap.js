@@ -24,7 +24,7 @@ const globby = require('globby');
 
                 return `
                         <url>
-                            <loc>${`hitman.co.il/${route}`}</loc>
+                            <loc>${`https://yoursitehere.com${route}`}</loc>
                         </url>
                     `;
               })
@@ -32,5 +32,5 @@ const globby = require('globby');
         </urlset>
     `;
 
-  fs.writeFileSync('public/sitemap.xml', formatted);
+  fs.writeFileSync('public/sitemap.xml');
 })();
