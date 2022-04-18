@@ -3,7 +3,7 @@ const fs = require('fs');
 const globby = require('globby');
 
 (async () => {
-  const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
+  // const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
 
   // Ignore Next.js specific files (e.g., _app.js) and API routes.
   const pages = await globby([

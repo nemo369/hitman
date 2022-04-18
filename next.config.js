@@ -12,9 +12,9 @@ module.exports = {
     webpack: (config, { isServer }) => {
         config.resolve.alias['components'] = path.join(__dirname, 'components')
         config.resolve.alias['public'] = path.join(__dirname, 'public')
-        if (isServer) {
-            require('./scripts/generate-sitemap');
-          }
+        // if (isServer) {
+        //     require('./scripts/generate-sitemap');
+        //   }
         return config
     }
 }

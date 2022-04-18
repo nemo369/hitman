@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default (handler, interval) => {
+ const useInterval =(handler, interval) => {
   const [intervalId, setIntervalId] = useState();
   useEffect(() => {
     const id = setInterval(handler, interval);
@@ -9,3 +9,4 @@ export default (handler, interval) => {
   }, []);
   return () => clearInterval(intervalId);
 };
+export default useInterval
