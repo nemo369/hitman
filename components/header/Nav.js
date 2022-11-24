@@ -16,7 +16,7 @@ const HeaderNav = () => {
         <nav className="flex around">
 
             <Link href="/">
-                <a> <HitmanLogo width="80px"/> </a>
+                 <HitmanLogo width="80px"/>
             </Link>
             <select value={router.asPath} onChange={navigate} className="header__select">
             <option ></option>

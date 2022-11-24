@@ -11,24 +11,20 @@ const Album = ({ album, index }) => {
                 <div className="title-bar-text">{album.title}</div>
                 <div className="title-bar-controls">
                     <Link href="/volume/[albumId]" as={`/volume/${album.albumNumber}`}>
-                        <a>
                             <button aria-label="Help"></button>
-                        </a>
                     </Link>
                 </div>
             </div>
             <div className="window-body album__body">
                 <div className="album__year">{album.year}</div>
                 <Link href="/volume/[albumId]" as={`/volume/${album.albumNumber}`}>
-                    <a>
                         <img className="album__thumb" src={thumbnail} alt={album.thumbnail?.alternativeText} />
-                    </a>
                 </Link>
                 <Link href="/volume/[albumId]" as={`/volume/${album.albumNumber}`}>
-                    <a className="album__details">
+                    <span className="album__details">
                         <div style={{fontSize:'22px'}}>היטמן - {album.albumNumber}</div>
                         <div className="album__songs">{album.songs.map((song, i) => (<span key={song.id}>{i ? ',' : ''} {song.by}</span>))}</div>
-                    </a>
+                    </span>
                 </Link>
             </div>
 

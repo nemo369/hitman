@@ -73,7 +73,7 @@ export const SongBox = ({ song, nextSong }) => {
                     <div>שיר מספר {song.trackNumber} מתוך</div>
                     <div>
                         <Link href="/volume/[albumId]" as={`/volume/${song.album.albumNumber}`}>
-                            <a>היטמן - {song.album.albumNumber}</a>
+                            היטמן - {song.album.albumNumber}
                         </Link>
 
                     </div>

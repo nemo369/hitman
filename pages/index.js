@@ -12,7 +12,7 @@ export default function Home({ albums }) {
       <div className="tac random-btn">
         <button>
           <Link href="/song">
-          <a>תנו לי שיר רנדומלי</a>
+          תנו לי שיר רנדומלי
           </Link>
           </button>
       </div>
