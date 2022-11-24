@@ -9,7 +9,7 @@
     "deploy": "next build && next export"
   },
   "dependencies": {
-    "98.css": "^0.1.16",
+    "98.css": "^0.1.18",
     "dotenv": "^8.2.0",
     "globby": "^11.0.1",
     "isomorphic-unfetch": "^3.0.0",

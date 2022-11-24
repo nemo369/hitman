@@ -1,4 +1,4 @@
-import { secToDisplay } from "../../utils/time";
+import { secToDisplay } from "../../utils/utils";
 import { useState } from "react";
 import { SongBox } from "../../pages/song";
 
@@ -9,7 +9,6 @@ const Songs = ({ songs }) => {
     }
 
     const openPopUp = (song)=>{
-        console.log(song);
         setCurrentSong(song)
     }
     return (

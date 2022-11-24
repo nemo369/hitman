@@ -1,6 +1,6 @@
-import Head from 'next/head'
 import Albums from '../components/Albums'
 import Link from 'next/link'
+
 
 export default function Home({ albums }) {
   return (
@@ -21,15 +21,15 @@ export default function Home({ albums }) {
   )
 }
 
+
 export async function getStaticProps() {
   const { API_URL } = process.env
 
   const res = await fetch(`${API_URL}/albums?_sort=year:ASC`)
   const albums = await res.json()
-
   return {
     props: {
-      albums,
+      albums:albums,
     },
     revalidate: 1000
   }

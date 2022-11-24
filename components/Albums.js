@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useState ,useEffect } from 'react'
 
 const Album = ({ album, index }) => {
-    // const { API_URL } = process.env
     const thumbnail = album.thumbnail?.formats.thumbnail.url;
 
 
